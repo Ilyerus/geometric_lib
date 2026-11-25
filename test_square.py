@@ -2,10 +2,8 @@ import unittest
 from square import area
 from square import perimeter
 
+
 class SquareTestCase(unittest.TestCase):
-    def test_area_zero(self):
-        res = area(0)
-        self.assertEqual(res, 0)
 
     def test_area_unit(self):
         res = area(1)
@@ -23,10 +21,6 @@ class SquareTestCase(unittest.TestCase):
         res = area(100)
         self.assertEqual(res, 10000)
 
-    def test_perimeter_zero(self):
-        res = perimeter(0)
-        self.assertEqual(res, 0)
-
     def test_perimeter_unit(self):
         res = perimeter(1)
         self.assertEqual(res, 4)
@@ -42,3 +36,19 @@ class SquareTestCase(unittest.TestCase):
     def test_perimeter_large(self):
         res = perimeter(100)
         self.assertEqual(res, 400)
+
+    def test_area_zero_side_raises(self):
+        with self.assertRaises(ValueError):
+            area(0)
+
+    def test_area_negative_side_raises(self):
+        with self.assertRaises(ValueError):
+            area(-1)
+
+    def test_perimeter_zero_side_raises(self):
+        with self.assertRaises(ValueError):
+            perimeter(0)
+
+    def test_perimeter_negative_side_raises(self):
+        with self.assertRaises(ValueError):
+            perimeter(-1)
