@@ -5,36 +5,42 @@ from circle import perimeter
 
 
 class CircleTestCase(unittest.TestCase):
-    '''
-       Тесты, которые проверяют правильность формулы
-    '''
+
+    # Тесты на корректность работы
+
     def test_area_positive(self):
         res = area(4)
         self.assertAlmostEqual(res, 50.26548245743669)
 
     def test_area_unit(self):
         res = area(1)
-        self.assertAlmostEqual(res, math.pi)
+        trRes = math.pi
+        self.assertAlmostEqual(res,trRes)
 
     def test_area_float(self):
         res = area(2.5)
-        self.assertAlmostEqual(res, 6.25 * math.pi)
+        trRes = math.pi * 6,25
+        self.assertAlmostEqual(res,trRes)
 
     def test_perimeter_positive(self):
         res = perimeter(3)
+        trRes = math.pi
         self.assertAlmostEqual(res, 18.84955592153876)
 
     def test_perimeter_unit(self):
         res = perimeter(1)
-        self.assertAlmostEqual(res, 2 * math.pi)
+        trRes = math.pi * 2
+        self.assertAlmostEqual(res,trRes)
 
     def test_perimeter_float(self):
         res = perimeter(2.5)
-        self.assertAlmostEqual(res, 5 * math.pi)
+        trRes = math.pi * 5
+        self.assertAlmostEqual(res,trRes)
 
-    '''
-          Тесты, которые проверяют корректность значения
-    '''
+    # Тесты на коммутативность
+    # Неприменимо: функция принимает один аргумент (радиус).
+
+    # Тесты на недопустимые значения
 
     def test_area_zero_radius_raises(self):
         with self.assertRaises(ValueError):
@@ -52,10 +58,8 @@ class CircleTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             perimeter(-1)
 
-    '''
-        Тесты, проверяющие корректность типа входных данных
-    '''
-    
+    # Тесты на строки
+
     def test_area_string_raises(self):
         with self.assertRaises(TypeError):
             area("1")
