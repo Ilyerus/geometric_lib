@@ -4,6 +4,9 @@ from rectangle import perimeter
 
 
 class RectangleTestCase(unittest.TestCase):
+    '''
+        Тесты, которые проверяют правильность формулы
+    '''
     def test_area_positive(self):
         res = area(2, 4)
         self.assertEqual(res, 8)
@@ -38,6 +41,10 @@ class RectangleTestCase(unittest.TestCase):
         res2 = perimeter(7, 3)
         self.assertEqual(res1, res2)
 
+    '''
+        Тесты, которые проверяют корректность значения
+    '''
+
     def test_area_zero_side_raises(self):
         with self.assertRaises(ValueError):
             area(0, 5)
@@ -53,3 +60,15 @@ class RectangleTestCase(unittest.TestCase):
     def test_perimeter_negative_side_raises(self):
         with self.assertRaises(ValueError):
             perimeter(-1, 5)
+
+    '''
+        Тесты, проверяющие корректность типа входных данных
+    '''
+
+    def test_area_string_raises(self):
+        with self.assertRaises(TypeError):
+            area("1", 5)
+
+    def test_perimeter_string_raises(self):
+        with self.assertRaises(TypeError):
+            perimeter("1", 5)

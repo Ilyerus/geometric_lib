@@ -4,7 +4,9 @@ from triangle import perimeter
 
 
 class TriangleTestCase(unittest.TestCase):
-
+    '''
+       Тесты, которые проверяют правильность формулы
+    '''
     def test_area_positive(self):
         res = area(2, 3)
         self.assertEqual(res, 3)
@@ -28,6 +30,10 @@ class TriangleTestCase(unittest.TestCase):
     def test_perimeter_float(self):
         res = perimeter(1.5, 2.5, 3.0)
         self.assertAlmostEqual(res, 7.0)
+
+    '''
+        Тесты, которые проверяют корректность значения
+    '''
 
     def test_area_zero_side_raises(self):
         with self.assertRaises(ValueError):
@@ -56,3 +62,15 @@ class TriangleTestCase(unittest.TestCase):
     def test_perimeter_inexistent_triangle_raises_2(self):
         with self.assertRaises(ValueError):
             perimeter(1, 1, 10)
+
+    '''
+        Тесты, проверяющие корректность типа входных данных
+    '''
+
+    def test_area_string_raises(self):
+        with self.assertRaises(TypeError):
+            area("1", 5)
+
+    def test_perimeter_string_raises(self):
+        with self.assertRaises(TypeError):
+            perimeter("1", 5, 10)

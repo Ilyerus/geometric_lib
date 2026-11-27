@@ -148,6 +148,72 @@ input: 1.2 2.7 3.5
 output: 7.4
 ```
 
+# Тестирование
+
+Вызов unit-тестов:
+>python3 -m unittest [исполняемый файл]
+
+Выход все тестов:
+```pyton
+test_area_float (test_circle.CircleTestCase.test_area_float) ... ok
+test_area_negative_radius_raises (test_circle.CircleTestCase.test_area_negative_radius_raises) ... FAIL
+test_area_positive (test_circle.CircleTestCase.test_area_positive) ... ok
+test_area_string_raises (test_circle.CircleTestCase.test_area_string_raises) ... ok
+test_area_unit (test_circle.CircleTestCase.test_area_unit) ... ok
+test_area_zero_radius_raises (test_circle.CircleTestCase.test_area_zero_radius_raises) ... FAIL
+test_perimeter_float (test_circle.CircleTestCase.test_perimeter_float) ... ok
+test_perimeter_negative_radius_raises (test_circle.CircleTestCase.test_perimeter_negative_radius_raises) ... FAIL
+test_perimeter_positive (test_circle.CircleTestCase.test_perimeter_positive) ... ok
+test_perimeter_string_raises (test_circle.CircleTestCase.test_perimeter_string_raises) ... ok
+test_perimeter_unit (test_circle.CircleTestCase.test_perimeter_unit) ... ok
+test_perimeter_zero_radius_raises (test_circle.CircleTestCase.test_perimeter_zero_radius_raises) ... FAIL
+test_area_commutative (test_rectangle.RectangleTestCase.test_area_commutative) ... ok
+test_area_float (test_rectangle.RectangleTestCase.test_area_float) ... ok
+test_area_negative_side_raises (test_rectangle.RectangleTestCase.test_area_negative_side_raises) ... FAIL
+test_area_positive (test_rectangle.RectangleTestCase.test_area_positive) ... ok
+test_area_square (test_rectangle.RectangleTestCase.test_area_square) ... ok
+test_area_string_raises (test_rectangle.RectangleTestCase.test_area_string_raises) ... FAIL
+test_area_zero_side_raises (test_rectangle.RectangleTestCase.test_area_zero_side_raises) ... FAIL
+test_perimeter_commutative (test_rectangle.RectangleTestCase.test_perimeter_commutative) ... ok
+test_perimeter_float (test_rectangle.RectangleTestCase.test_perimeter_float) ... ok
+test_perimeter_negative_side_raises (test_rectangle.RectangleTestCase.test_perimeter_negative_side_raises) ... FAIL
+test_perimeter_positive (test_rectangle.RectangleTestCase.test_perimeter_positive) ... ok
+test_perimeter_square (test_rectangle.RectangleTestCase.test_perimeter_square) ... ok
+test_perimeter_string_raises (test_rectangle.RectangleTestCase.test_perimeter_string_raises) ... ok
+test_perimeter_zero_side_raises (test_rectangle.RectangleTestCase.test_perimeter_zero_side_raises) ... FAIL
+test_area_float (test_square.SquareTestCase.test_area_float) ... ok
+test_area_large (test_square.SquareTestCase.test_area_large) ... ok
+test_area_negative_side_raises (test_square.SquareTestCase.test_area_negative_side_raises) ... FAIL
+test_area_positive (test_square.SquareTestCase.test_area_positive) ... ok
+test_area_string_raises (test_square.SquareTestCase.test_area_string_raises) ... ok
+test_area_unit (test_square.SquareTestCase.test_area_unit) ... ok
+test_area_zero_side_raises (test_square.SquareTestCase.test_area_zero_side_raises) ... FAIL
+test_perimeter_float (test_square.SquareTestCase.test_perimeter_float) ... ok
+test_perimeter_large (test_square.SquareTestCase.test_perimeter_large) ... ok
+test_perimeter_negative_side_raises (test_square.SquareTestCase.test_perimeter_negative_side_raises) ... FAIL
+test_perimeter_positive (test_square.SquareTestCase.test_perimeter_positive) ... ok
+test_perimeter_string_raises (test_square.SquareTestCase.test_perimeter_string_raises) ... FAIL
+test_perimeter_unit (test_square.SquareTestCase.test_perimeter_unit) ... ok
+test_perimeter_zero_side_raises (test_square.SquareTestCase.test_perimeter_zero_side_raises) ... FAIL
+test_area_float (test_triangle.TriangleTestCase.test_area_float) ... ok
+test_area_large (test_triangle.TriangleTestCase.test_area_large) ... ok
+test_area_negative_side_raises (test_triangle.TriangleTestCase.test_area_negative_side_raises) ... FAIL
+test_area_positive (test_triangle.TriangleTestCase.test_area_positive) ... ok
+test_area_string_raises (test_triangle.TriangleTestCase.test_area_string_raises) ... ok
+test_area_zero_height_raises (test_triangle.TriangleTestCase.test_area_zero_height_raises) ... FAIL
+test_area_zero_side_raises (test_triangle.TriangleTestCase.test_area_zero_side_raises) ... FAIL
+test_perimeter_equilateral (test_triangle.TriangleTestCase.test_perimeter_equilateral) ... ok
+test_perimeter_float (test_triangle.TriangleTestCase.test_perimeter_float) ... ok
+test_perimeter_inexistent_triangle_raises (test_triangle.TriangleTestCase.test_perimeter_inexistent_triangle_raises) ... FAIL
+test_perimeter_inexistent_triangle_raises_2 (test_triangle.TriangleTestCase.test_perimeter_inexistent_triangle_raises_2) ... FAIL
+test_perimeter_negative_side_raises (test_triangle.TriangleTestCase.test_perimeter_negative_side_raises) ... FAIL
+test_perimeter_positive (test_triangle.TriangleTestCase.test_perimeter_positive) ... ok
+test_perimeter_string_raises (test_triangle.TriangleTestCase.test_perimeter_string_raises) ... ok
+test_perimeter_zero_side_raises (test_triangle.TriangleTestCase.test_perimeter_zero_side_raises) ... FAIL
+```
+
+
+
 # Коммиты проекта
 
 ```cmd

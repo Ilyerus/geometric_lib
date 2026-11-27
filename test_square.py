@@ -4,7 +4,9 @@ from square import perimeter
 
 
 class SquareTestCase(unittest.TestCase):
-
+    '''
+       Тесты, которые проверяют правильность формулы
+    '''
     def test_area_unit(self):
         res = area(1)
         self.assertEqual(res, 1)
@@ -37,6 +39,11 @@ class SquareTestCase(unittest.TestCase):
         res = perimeter(100)
         self.assertEqual(res, 400)
 
+
+    '''
+          Тесты, которые проверяют корректность значения
+    '''
+
     def test_area_zero_side_raises(self):
         with self.assertRaises(ValueError):
             area(0)
@@ -52,3 +59,15 @@ class SquareTestCase(unittest.TestCase):
     def test_perimeter_negative_side_raises(self):
         with self.assertRaises(ValueError):
             perimeter(-1)
+
+    '''
+        Тесты, проверяющие корректность типа входных данных
+    '''
+
+    def test_area_string_raises(self):
+        with self.assertRaises(TypeError):
+            area("1")
+
+    def test_perimeter_string_raises(self):
+        with self.assertRaises(TypeError):
+            perimeter("1")
